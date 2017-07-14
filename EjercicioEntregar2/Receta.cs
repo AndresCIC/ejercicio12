@@ -10,6 +10,7 @@ namespace EjercicioEntregar2
     {
         public float PesoAlimento1 { get; set; }
         public float PesoAlimento2 { get; set; }
+        public String nombre { get; set; }
 
     }
 }

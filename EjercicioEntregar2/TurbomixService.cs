@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace EjercicioEntregar2
 {
-    public class TurbomixService
+    public class TurbomixService : ITurbomixService
     {
         public IBascula Bascula { get; set; }
         public ICocina Cocina { get; set; }
         public IRecetaService Receta { get; set; }
-        public IRecetaRepository RecetaRepository { get; set; }
         /*
          * 30"
+         * Version 3.1 En lugar de llamar a recetaRepository, esta vez entra por receta Service, recetaService llama a repository
          */
 
-        public TurbomixService(IBascula _Bascula, ICocina _Cocina)
+        public TurbomixService(IBascula _Bascula, ICocina _Cocina, IRecetaRepository _RecetaReposity)
         {
             this.Bascula = _Bascula;
             this.Cocina = _Cocina;
@@ -43,12 +43,6 @@ namespace EjercicioEntregar2
             Cocina.Calentar(Alimento1, Alimento2);
 
             return new Plato(Alimento1, Alimento2);
-        }
-
-        public void AddRecipe(Receta receta)
-        {
-            Receta recetaNueva = new Receta();
-            RecetaRepository.AddRecipe(recetaNueva);            
         }
 
     }

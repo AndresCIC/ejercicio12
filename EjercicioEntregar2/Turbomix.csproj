@@ -47,6 +47,7 @@
     <Compile Include="ICocina.cs" />
     <Compile Include="IRecetaRepository.cs" />
     <Compile Include="IRecetaService.cs" />
+    <Compile Include="ITurbomixService.cs" />
     <Compile Include="Plato.cs" />
     <Compile Include="Receta.cs" />
     <Compile Include="RecetaRepository.cs" />

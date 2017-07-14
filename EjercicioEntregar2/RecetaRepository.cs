@@ -15,10 +15,31 @@ namespace EjercicioEntregar2
             ListaRecetas = new List<Receta>();
         }
 
-        public void AddRecipe(Receta receta)
+        public void Add(Receta receta)
         {
             ListaRecetas.Add(receta);
         }
+
+        public Receta Read(String nombre)
+        {
+            return ListaRecetas.Find(x => x.nombre == nombre);
+        }
+
+        public List<Receta> List()
+        {
+            return ListaRecetas;
+        }
+
+        public void Update(Receta receta)
+        {
+
+        }
+
+        public bool Delete(string nombre)
+        {
+            return ListaRecetas.Remove(ListaRecetas.Find(x => x.nombre == nombre));
+        }
+
 
     }
 }

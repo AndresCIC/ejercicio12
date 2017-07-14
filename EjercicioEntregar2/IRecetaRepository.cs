@@ -1,7 +1,13 @@
-﻿namespace EjercicioEntregar2
+﻿using System.Collections.Generic;
+
+namespace EjercicioEntregar2
 {
     public interface IRecetaRepository
     {
-        void AddRecipe(Receta receta);
+        void Add(Receta receta);
+        bool Delete(string nombre);
+        List<Receta> List();
+        Receta Read(string nombre);
+        void Update(Receta receta);
     }
 }

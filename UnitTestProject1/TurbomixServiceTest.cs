@@ -34,7 +34,7 @@ namespace TurboMixTest
             IBascula basculaService = mockBasculaService.Object;
             ICocina cocinaService = mockCocinaService.Object;
 
-            TurbomixService sut = new TurbomixService(basculaService, cocinaService);
+            TurbomixService sut = new TurbomixService(basculaService, cocinaService, null);
             Alimento mAlimento1 = new Alimento();
             mAlimento1.Nombre = "Curry";
             mAlimento1.Peso = 1.5F;
