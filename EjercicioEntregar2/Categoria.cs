@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace EjercicioEntregar2
 {
-    public class BasculaService : IBasculaService
+    public class Categoria
     {
-        public float Pesar(Alimento mAlimento)
-        {
-            return mAlimento.Peso;
-        }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
     }
 }

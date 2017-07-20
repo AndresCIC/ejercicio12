@@ -41,10 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alimento.cs" />
+    <Compile Include="Avisos.cs" />
     <Compile Include="BasculaService.cs" />
+    <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriaRepository.cs" />
+    <Compile Include="CategoriaService.cs" />
     <Compile Include="CocinaService.cs" />
-    <Compile Include="IBascula.cs" />
-    <Compile Include="ICocina.cs" />
+    <Compile Include="IBasculaService.cs" />
+    <Compile Include="ICategoriaRepository.cs" />
+    <Compile Include="ICategoriaService.cs" />
+    <Compile Include="ICocinaService.cs" />
     <Compile Include="IRecetaRepository.cs" />
     <Compile Include="IRecetaService.cs" />
     <Compile Include="ITurbomixService.cs" />

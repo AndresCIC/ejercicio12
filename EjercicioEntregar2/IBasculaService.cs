@@ -1,6 +1,6 @@
 ﻿namespace EjercicioEntregar2
 {
-    public interface IBascula
+    public interface IBasculaService
     {
         float Pesar(Alimento mAlimento);
     }

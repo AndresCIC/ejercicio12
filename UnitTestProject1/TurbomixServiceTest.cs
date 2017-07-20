@@ -12,8 +12,8 @@ namespace TurboMixTest
         public void TestPrepararPlato()
         {
             
-            var mockBasculaService = new Mock<IBascula>();
-            var mockCocinaService = new Mock<ICocina>();
+            var mockBasculaService = new Mock<IBasculaService>();
+            var mockCocinaService = new Mock<ICocinaService>();
 
             mockBasculaService.Setup(bascula => bascula.Pesar(It.IsAny<Alimento>()))
                 .Returns((Alimento p) => p.Peso);
@@ -31,8 +31,8 @@ namespace TurboMixTest
 
                 );
 
-            IBascula basculaService = mockBasculaService.Object;
-            ICocina cocinaService = mockCocinaService.Object;
+            IBasculaService basculaService = mockBasculaService.Object;
+            ICocinaService cocinaService = mockCocinaService.Object;
 
             TurbomixService sut = new TurbomixService(basculaService, cocinaService, null);
             Alimento mAlimento1 = new Alimento();

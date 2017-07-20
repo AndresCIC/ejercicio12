@@ -8,15 +8,15 @@ namespace EjercicioEntregar2
 {
     public class TurbomixService : ITurbomixService
     {
-        public IBascula Bascula { get; set; }
-        public ICocina Cocina { get; set; }
+        public IBasculaService Bascula { get; set; }
+        public ICocinaService Cocina { get; set; }
         public IRecetaService Receta { get; set; }
         /*
          * 30"
          * Version 3.1 En lugar de llamar a recetaRepository, esta vez entra por receta Service, recetaService llama a repository
          */
 
-        public TurbomixService(IBascula _Bascula, ICocina _Cocina, IRecetaRepository _RecetaReposity)
+        public TurbomixService(IBasculaService _Bascula, ICocinaService _Cocina, IRecetaRepository _RecetaReposity)
         {
             this.Bascula = _Bascula;
             this.Cocina = _Cocina;

@@ -9,10 +9,13 @@ namespace EjercicioEntregar2
     public class RecetaService : IRecetaService
     {
         private IRecetaRepository RecetaRepo;
+        private ICategoriaService CategoriaService;
 
-        public RecetaService(IRecetaRepository _RecetaRepo)
+        public RecetaService(IRecetaRepository _RecetaRepo, ICategoriaService _CategoriaService)
         {
             this.RecetaRepo = _RecetaRepo;
+            this.CategoriaService = _CategoriaService;
+
         }
         public bool CompruebaPeso(float peso1, float peso2)
         {
@@ -34,7 +37,14 @@ namespace EjercicioEntregar2
         /// <param name="receta"></param>
         public void Add(Receta receta)
         {
-            RecetaRepo.Add(receta);
+            if(CategoriaService.ExisteCategoriaYNoNula(receta.categoria)){
+                 RecetaRepo.Add(receta);
+            }
+            else
+            {
+                throw new Exception("La categoria debe existir y no ser nula!!");
+            }         
+             
         }
 
     }
